@@ -1,6 +1,6 @@
 //
 // Project:        gopcie
-// File:           pcie.go
+// File:           gopcie.go
 // Date Create:    June 9th 2017
 // Date Modified:  July 4th 2017
 // Author:         Andreas Oeldemann, TUM <andreas.oeldemann@tum.de>
