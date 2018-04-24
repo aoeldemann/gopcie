@@ -1,23 +1,46 @@
 //
-// Project:        gopcie
-// File:           gopcie.go
-// Date Create:    June 9th 2017
-// Date Modified:  July 4th 2017
-// Author:         Andreas Oeldemann, TUM <andreas.oeldemann@tum.de>
+// The MIT License
+//
+// Copyright (c) 2017-2018 by the author(s)
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
+//
+// Author(s):
+//   - Andreas Oeldemann <andreas.oeldemann@tum.de>
+//
+// Date Created:        June 9th 2017
+// Date Last Modified:  July 4th 2017
+//
+// Description:
+//
+// Package gopcie implements data transfer to/from a PCIExpress hardware device
+// on a Linux-based system. Data can be transferred via:
+//
+//  1) PCIExpress Direct Memory Access (DMA) transfers (requires kernel-space
+//	 device driver) or
+//  2) PCIExpress Base Address Register (BAR) accesses.
+//
+// The BAR resource file identification is based on Andre Richter's
+// easy-pci-mmap:
+//   https://github.com/andre-richter/easy-pci-mmap
 //
 
-/*
-Package gopcie implements data transfer to/from a PCIExpress hardware device on
-a Linux-based system. Data can be transferred via:
-
-  1) PCIExpress Direct Memory Access (DMA) transfers (requires kernel-space
-	 device driver) or
-  2) PCIExpress Base Address Register (BAR) accesses.
-
-The BAR resource file identification is based on Andre Richter's easy-pci-mmap:
-https://github.com/andre-richter/easy-pci-mmap
-
-*/
 package gopcie
 
 import (
